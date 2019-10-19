@@ -8,20 +8,22 @@ const h1 = document.querySelector('h1')
 fetch(genUrl)
     .then(res => res.json())
     .then(res => {
-        console.log(res.results)
         let gen = res.results;
         let ul1 = document.querySelector('.content')
         let a1 = document.createElement('li');
-        a1.setAttribute('class', 'games');
+
+        a1.setAttribute('class', 'listEl');
         a1.innerText = "Games";
         ul1.appendChild(a1);
+
         let allGames = document.createElement('ul');
-        allGames.setAttribute('class', 'gamelist');
+        allGames.setAttribute('class', 'newL');
         a1.appendChild(allGames);
+
         for(let i = 0; i < gen.length; i++) {
-            console.log(gen[i].name);
+            
             let gList = document.createElement('li');
-            gList.setAttribute('class', 'gnames');
+            gList.setAttribute('class', 'names');
             gList.innerText = gen[i].name;
             allGames.appendChild(gList);
         }
@@ -33,20 +35,22 @@ fetch(genUrl)
 fetch(url)
 .then(res => res.json())
 .then(res => {
-    console.log(res.results)
     let pkmn = res.results;
     let ul1 = document.querySelector('.content')
     let a1 = document.createElement('li');
-    a1.setAttribute('class', 'pokemon');
+
+    a1.setAttribute('class', 'listEl');
     a1.innerText = "Pokemon";
     ul1.appendChild(a1);
+
     let allPkmn = document.createElement('ul');
-    allPkmn.setAttribute('class', 'pkmnlist');
+    allPkmn.setAttribute('class', 'newL');
     a1.appendChild(allPkmn);
+
     for(let i = 0; i < pkmn.length; i++) {
-        console.log(pkmn[i].name);
+        
         let pList = document.createElement('li');
-        pList.setAttribute('class', 'pnames');
+        pList.setAttribute('class', 'names');
         pList.innerText = pkmn[i].name;
         allPkmn.appendChild(pList);
     }
@@ -58,22 +62,27 @@ fetch(url)
 fetch(urlBerry)
 .then(res => res.json())
 .then(res => {
-    console.log(res.results)
+
     let berry = res.results;
     let ul1 = document.querySelector('.content')
     let a1 = document.createElement('li');
-    a1.setAttribute('class', 'berries');
+
+    a1.setAttribute('class', 'listEl');
     a1.innerText = "Berries";
     ul1.appendChild(a1);
+
     let allBerries = document.createElement('ul');
-    allBerries.setAttribute('class', 'brylist');
+    allBerries.setAttribute('class', 'newL');
     a1.appendChild(allBerries);
+
     for(let i = 0; i < berry.length; i++) {
-        console.log(berry[i].name);
+        
         let bList = document.createElement('li');
-        bList.setAttribute('class', 'bnames');
+        bList.setAttribute('class', 'names');
         bList.innerText = berry[i].name;
         allBerries.appendChild(bList);
     }
 })
 .catch(err => console.log(err))
+
+// Event listener for accordion
