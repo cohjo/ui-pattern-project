@@ -8,11 +8,11 @@ for (i = 0; i < list.length; i++) {
       
       this.classList.toggle("active");
 
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
+      var panel = all[i];
+      if (panel.style.display === "none") {
         panel.style.display = "block";
+      } else {
+        panel.style.display = "none";
       }
     })
 }
