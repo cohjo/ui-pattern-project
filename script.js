@@ -85,4 +85,5 @@ fetch(urlBerry)
 })
 .catch(err => console.log(err))
 
+console.log(1);
 // Event listener for accordion
