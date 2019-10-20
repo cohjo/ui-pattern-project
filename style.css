@@ -1,12 +1,14 @@
-.names {
+*{
+  box-sizing: border-box;
+}
+
+.newL {
     padding: 0 18px;
-    background-color: white;
     display: none;
     overflow: hidden;
   }
 
   .listEl {
-    background-color: white;
     color: black;
     cursor: pointer;
     padding: 18px;
@@ -17,7 +19,11 @@
     transition: 0.4s;
   }
 
-  .active, .newL:hover {
-    background-color: white;
-    color: white;
+  .active, .listEl:hover {
+    color: grey;
   }
+/* 
+  img {
+    height: 200px;
+    width: 300px;
+  } */
