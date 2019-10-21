@@ -2,17 +2,19 @@ console.log(2);
 var list = document.getElementsByClassName('listEl');
 var all = document.getElementsByClassName('newL');
 var i;
+var panel;
 
 for (i = 0; i < list.length; i++) {
-    list[i].innerHTML.addEventListener("click", function() {
-      
-      this.classList.toggle("active");
+  list[i].addEventListener("click", function(e) {
+    e.preventDefault();
+    this.classList.toggle("active");
 
-      var panel = all[i];
-      if (panel.style.display === "none") {
-        panel.style.display = "block";
-      } else {
-        panel.style.display = "none";
-      }
-    })
+    // panel = list.children;
+    if (all.style.display === "none") {
+      all.style.display = "block";
+      all.style.overflow = "visible";
+    } else {
+      all.style.display = "none";
+    }
+  })
 }

@@ -4,7 +4,7 @@
 
 .newL {
     padding: 0 18px;
-    display: none;
+    display: none; 
     overflow: hidden;
   }
 
@@ -21,4 +21,9 @@
 
   .active, .listEl:hover {
     color: grey;
+  }
+
+  .disappear {
+    display: none;
+    overflow: hidden;
   }
