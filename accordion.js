@@ -7,14 +7,14 @@ var panel;
 for (i = 0; i < list.length; i++) {
   list[i].addEventListener("click", function(e) {
     e.preventDefault();
-    this.classList.toggle("active");
 
+    list[i].children.classList.toggle("show");
     // panel = list.children;
-    if (all.style.display === "none") {
-      all.style.display = "block";
-      all.style.overflow = "visible";
-    } else {
-      all.style.display = "none";
-    }
+    // if (all.style.display === "none") {
+    //   all.style.display = "block";
+    //   all.style.overflow = "visible";
+    // } else {
+    //   all.style.display = "none";
+    // }
   })
 }
