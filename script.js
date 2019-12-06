@@ -4,7 +4,16 @@ const urlBerry = "https://pokeapi.co/api/v2/berry/?limit=64"
 const ul = document.querySelector('ul')
 const h1 = document.querySelector('h1')
 
+const pk = document.querySelector('#pk');
+const gm = document.querySelector('#gm');
+const br = document.querySelector('#br');
+
+const allPkmn = document.querySelector('#allpkmn');
+const allGames = document.querySelector('#allgames');
+const allBerries = document.querySelector('#allberries');
 // Fetching game names and adding to html
+
+gm.addEventListener('click', function(e) { 
 fetch(genUrl)
     .then(res => res.json())
     .then(res => {
@@ -12,13 +21,13 @@ fetch(genUrl)
         let ul1 = document.querySelector('.content')
         let a1 = document.createElement('li');
 
-        a1.setAttribute('class', 'listEl');
-        a1.innerText = "Games";
-        ul1.appendChild(a1);
+        // a1.setAttribute('class', 'listEl');
+        // a1.innerText = "Games";
+        // ul1.appendChild(a1);
 
-        let allGames = document.createElement('ul');
-        allGames.setAttribute('class', 'newL');
-        a1.appendChild(allGames);
+        // let allGames = document.createElement('ul');
+        // allGames.setAttribute('class', 'newL');
+        // gm.appendChild(allGames);
 
         for(let i = 0; i < gen.length; i++) {
             
@@ -28,20 +37,22 @@ fetch(genUrl)
             allGames.appendChild(gList);
         }
         
-        a1.addEventListener('click', function(e) {
-            e.preventDefault();
-            console.log("click it")
+        // gm.addEventListener('click', function(e) {
+        //     e.preventDefault();
+        //     console.log("click it")
         
         
-            if(allGames.className == "newL") {
+        
+        // });
+    })
+    .catch(err => console.log(err))
+
+        if(allGames.className == "newL") {
                 allGames.className = "show";
             } else {
                 allGames.className = "newL";
             }
-        });
-    })
-    .catch(err => console.log(err))
-
+})
 
 
 
@@ -54,13 +65,13 @@ fetch(url)
     let ul1 = document.querySelector('.content')
     let a1 = document.createElement('li');
 
-    a1.setAttribute('class', 'listEl');
-    a1.innerText = "Pokemon";
-    ul1.appendChild(a1);
+    // a1.setAttribute('class', 'listEl');
+    // a1.innerText = "Pokemon";
+    // ul1.appendChild(a1);
 
-    let allPkmn = document.createElement('ul');
-    allPkmn.setAttribute('class', 'newL');
-    a1.appendChild(allPkmn);
+    // let allPkmn = document.createElement('ul');
+    // allPkmn.setAttribute('class', 'newL');
+    // pk.appendChild(allPkmn);
 
     for(let i = 0; i < pkmn.length; i++) {
         
@@ -70,7 +81,7 @@ fetch(url)
         allPkmn.appendChild(pList);
     }
 
-    a1.addEventListener('click', function(e) {
+    pk.addEventListener('click', function(e) {
         e.preventDefault();
         console.log("click it")
     
