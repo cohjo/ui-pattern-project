@@ -27,8 +27,23 @@ fetch(genUrl)
             gList.innerText = gen[i].name;
             allGames.appendChild(gList);
         }
+        
+        a1.addEventListener('click', function(e) {
+            e.preventDefault();
+            console.log("click it")
+        
+        
+            if(allGames.className == "newL") {
+                allGames.className = "show";
+            } else {
+                allGames.className = "newL";
+            }
+        });
     })
     .catch(err => console.log(err))
+
+
+
 
 
 // Fetching pokemon names and adding to html
@@ -54,6 +69,18 @@ fetch(url)
         pList.innerText = pkmn[i].name;
         allPkmn.appendChild(pList);
     }
+
+    a1.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log("click it")
+    
+    
+        if(allPkmn.className == "newL") {
+            allPkmn.className = "show";
+        } else {
+            allPkmn.className = "newL";
+        }
+    });
 })
 .catch(err => console.log(err))
 
@@ -82,8 +109,17 @@ fetch(urlBerry)
         bList.innerText = berry[i].name;
         allBerries.appendChild(bList);
     }
+
+    a1.addEventListener('click', function(e) {
+        e.preventDefault();
+        console.log("click it")
+    
+    
+        if(allBerries.className == "newL") {
+            allBerries.className = "show";
+        } else {
+            allBerries.className = "newL";
+        }
+    });
 })
 .catch(err => console.log(err))
-
-console.log(1);
-// Event listener for accordion
